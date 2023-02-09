@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fb5eb9adee.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="icon" type="image" href="./media/gamefavicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="./css/games.css">
+    <title>Game Rate | Games</title>
+</head>
+
+<body>
+    <div class="top-navigation-bar">
+
+        <div class="toggle-button-container">
+            <img src="./media/burger-btn.png" id="menu-button" alt="">
+        </div>
+
+        <div class="logo-container">
+            <a href="./index.html"><img src="./media/main-logo.jpg" id="logo-button" alt="logo"></a>
+        </div>
+        
+        <!-- desktope navigation bar -->
+        <ul class="big-menu-list">
+            <li><a href="">games</a></li>
+            <li><a href="">developers</a></li>
+            <li><a href="./shop.html">shop</a></li>
+            <li><a href="">consoles</a></li>
+        </ul>
+
+        <div class="sing-in-container">
+            
+            <div class="shopping">
+                <img src="/media/shopping-cart.png" id="shopping-card" alt="">
+                <h1 class="total-items-in-cart">0</h1>
+            </div>
+            
+            <div class="png-container">
+                <img src="./media/search-btn.png" id="search-button" alt="">
+                <img src="./media/sign-in.png" id="sign-button" alt="">
+            </div>
+            
+        </div>
+
+        <div class="search-pannel">
+            <form id="big-nosubmit">
+                <input class="nosubmit" id="search" type="search" placeholder="Type Your Search...">
+            </form>
+        </div>
+    </div>
+
+    <!-- mobile navigation bar -->
+    <aside id="side-menu">
+        <ul class="menu-list">
+            <li>games</li>
+            <li>developer CO.</li>
+            <li><a href="./shop.html">shop</a></li>
+            <li>consols</li>
+            <form class="nosubmit">
+                <input class="nosubmit" id="search" type="search" placeholder="Search...">
+            </form>
+        </ul>
+    </aside>
+
+    <!-- header section -->
+    <div class="main-container">
+        <!-- games wallpaper toggle-->
+        <div class="slide-wrapper">
+            <div class="slideShow-container"></div>
+        </div>
+        <!-- next double content slideshow-->
+        <div class="content-container">
+
+            <div class="dota-container">
+                <div class="dota-wrapper"></div>
+            </div>
+
+            <div class="mid-header">
+                <h1>free to play</h1>
+            </div>
+
+            <div class="warzone-container">
+                <div class="BT-wrapper"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cart">
+    
+        <div class="cart-header">your shopping cart</div>
+    
+        <div class="cart-items"></div>
+    
+        <div class="cart-footer">
+            <div class="subtotal">Subtotal (0 items): $0</div>
+            <div class="checkout"> Proceed to checkout</div>
+        </div>
+    
+    </div>
+
+<!-- headline -->
+    <div class="header" data-aos="slide-right" data-aos-duration="1500">
+        <h1>Discover your next favorite game</h1>
+        <h3>Play hundreds of high-quality games with friends on consoles & PC,</h3>
+    </div>
+
+    <div class="icons-container" data-aos="zoom-in" data-aos-duration="1500"></div>></div>
+
+    <div class="filter-buttons-container"></div>
+
+
+    <form class="game-search">
+        <input type="text" name="" id="search-item" placeholder="find your game..." onkeyup="search()">
+    </form>
+
+    <div class="game-cards-container" id="game-cards"></div>
+
+    <div class="loadBtn-container">
+        <button class="feature-more-btn">load more</button>
+    </div>
+
+
+<!-- footer section -->
+    <footer class="socialIcons"></footer>
+    <div class="global-btn-container">
+        <button class="globe">
+            <i class="fa-solid fa-globe"></i>ENGLISH<i class="fa-sharp fa-solid fa-caret-down"></i>
+        </button>
+    </div>
+    <footer class="support"></footer>
+    
+    <script src="./javascript/games.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

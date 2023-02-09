@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fb5eb9adee.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image" href="./media/gamefavicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/shop.css">
+    <title>Game Rate | Shop</title>
+</head>
+
+<body>
+    <div class="top-navigation-bar">
+
+        <div class="toggle-button-container">
+            <img src="./media/burger-btn.png" id="menu-button" alt="">
+        </div>
+
+        <div class="logo-container">
+            <a href="./index.html"><img src="./media/main-logo.jpg" id="logo-button" alt="logo"></a>
+        </div>
+
+        <!-- desktope navigation bar -->
+        <ul class="big-menu-list">
+            <li><a href="./games.html">games</a></li>
+            <li><a href="">developers</a></li>
+            <li><a href="../html/shop.html">shop</a></li>
+            <li><a href="">consoles</a></li>
+        </ul>
+
+        <div class="sing-in-container">
+
+            <div class="shopping">
+                <img src="/media/shopping-cart.png" id="shopping-card" alt="">
+                <h1 class="total-items-in-cart">0</h1>
+            </div>
+
+            <div class="png-container">
+                <img src="./media/search-btn.png" id="search-button" alt="">
+                <img src="./media/sign-in.png" id="sign-button" alt="">
+            </div>
+
+        </div>
+
+        <div class="search-pannel">
+            <form id="big-nosubmit">
+                <input class="nosubmit" id="search" type="search" placeholder="Type Your Search...">
+            </form>
+        </div>
+    </div>
+
+    <!-- mobile navigation bar -->
+    <aside id="side-menu">
+        <ul class="menu-list">
+            <li><a href="./games.html">games</a></li>
+            <li>developer CO.</li>
+            <li><a href="">shop</a></li>
+            <li>consols</li>
+            <form class="nosubmit">
+                <input class="nosubmit" id="search" type="search" placeholder="Search...">
+            </form>
+        </ul>
+    </aside>
+
+    <!-- header  section -->
+    <header>
+
+        <div class="shop-content" data-aos="slide-right" data-aos-duration="1500">
+            <h1>game <h1>rate</h1>
+            </h1>
+            <h3>Shop with us. purchase various gaming products.</h3>
+            <h4>& play infinitely</h4>
+        </div>
+
+        <form class="product-search">
+            <input type="text" name="" id="search-item" placeholder="search your product..." onkeyup="search()">
+        </form>
+
+    </header>
+
+    <!-- cards -->
+    <div class="filter-buttons-container"></div>
+
+    <div class="card-container" id="store-cards"></div>
+
+    <div class="cart">
+
+        <div class="cart-header">your shopping cart</div>
+
+        <div class="cart-items"></div>
+
+        <div class="cart-footer">
+            <div class="subtotal">Subtotal (0 items): $0</div>
+            <div class="checkout"> Proceed to checkout</div>
+        </div>
+
+    </div>
+
+    <!-- pre-footer -->
+    <div class="slide-wrapper" data-aos="zoom-in" data-aos-duration="1500">
+        <h1>upgrade your PC with a featured parts</h1>
+        <h2>create your own comfort</h2>
+        <div class="tech-container"></div>
+    </div>
+
+
+    <!-- footer section -->
+    <footer class="socialIcons"></footer>
+    <div class="global-btn-container">
+        <button class="globe">
+            <i class="fa-solid fa-globe"></i>ENGLISH<i class="fa-sharp fa-solid fa-caret-down"></i>
+        </button>
+    </div>
+    <footer class="support"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./javascript/shop.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

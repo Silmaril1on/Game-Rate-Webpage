@@ -1,0 +1,282 @@
+@font-face {
+  font-family: azonix;
+  src: url(../fonts/Azonix.otf);
+}
+@font-face {
+  font-family: trajan pro;
+  src: url(../fonts/Trajan\ Pro.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* home button section */
+.home {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
+
+.home a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.home img {
+  width: auto;
+  height: 100%;
+}
+
+.home h1 {
+  font: bold 1.5rem azonix;
+  padding: 14px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* main section */
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+main video {
+  height: auto;
+  width: 100%;
+}
+
+.game-discription {
+  color: white;
+  font-family: trajan pro;
+  height: 100%;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.game-discription h1 {
+  font-size: 1.7rem;
+  padding: 10px;
+}
+
+.game-discription > h6 {
+  padding: 10px;
+}
+
+.platforms {
+  margin: 10px;
+}
+
+.platforms ul li {
+  border: 1px solid white;
+  display: inline-block;
+  text-transform: uppercase;
+  font: bold 0.6rem trajan pro;
+  letter-spacing: 1px;
+  padding: 1px;
+}
+
+.price {
+  margin: 40px 10px 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.cart {
+  background-color: red;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font: bold 0.9rem trajan pro;
+  height: 40px;
+  max-width: 250px;
+  margin-right: 10px;
+  padding: 9px;
+  transition: 0.2s;
+  width: 50%;
+}
+
+.cart:hover {
+  background-color: rgba(255, 0, 0, 0.678);
+}
+
+.wishlist {
+  background-color: transparent;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font: bold 0.8rem trajan pro;
+  height: 40px;
+  justify-content: space-around;
+  max-width: 140px;
+  padding: 10px;
+  transition: 0.2s;
+  width: 30%;
+}
+
+.wishlist:hover {
+  background-color: rgba(128, 128, 128, 0.527);
+}
+
+.wishlist > img {
+  height: 20px;
+  width: 20px;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.ratings > a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: white;
+  max-width: 230px;
+  width: 70%;
+}
+
+.ratings > a > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.ratings a > h1 {
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.ratings a > h1:hover {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.user-rate {
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+  max-width: 200px;
+  transition: 0.3s;
+}
+
+.user-rate:hover {
+  background-color: rgba(128, 128, 128, 0.527);
+}
+
+.user-rate > img {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.user-rate > h1 {
+  font-size: 1rem;
+  color: goldenrod;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-top: 5%;
+  max-width: 430px;
+}
+
+.rating > img {
+  width: 50px;
+  height: 100%;
+}
+
+.rating div h1 {
+  font: bold 0.6rem trajan pro;
+}
+
+.game-stats {
+  background-color: rgb(29, 28, 28);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  max-width: 370px;
+  padding: 5px;
+  text-align: center;
+  width: 90%;
+}
+
+.game-stats > a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.game-stats > a:hover {
+  text-decoration: underline;
+}
+
+.times {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.times > div > h1 {
+  font-size: 1.1rem;
+}
+
+.times > div > h3 {
+  font-size: 0.6rem;
+}
+
+@media screen and (min-width: 650px) {
+  .game-discription {
+    position: absolute;
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.295));
+    padding: 5%;
+    width: 90%;
+  }
+  .game-discription > h1 {
+    font-size: 2.5rem;
+  }
+  .ratings {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .game-discription > h1 {
+    font-size: 3.5rem;
+  }
+  .rating {
+    float: right;
+  }
+}

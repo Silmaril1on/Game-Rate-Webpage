@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fb5eb9adee.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Welcome | Game Rate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body> 
+
+    <div class="top-navigation-bar">
+
+         <div class="toggle-button-container">
+            <img src="./media/burger-btn.png" id="menu-button" alt="">
+        </div>
+        
+        <div class="logo-container">
+            <img src="../media/main-logo.jpg" id="logo-button" alt="logo">
+        </div>
+        <!-- desktope navigation bar -->
+        <ul class="big-menu-list">
+            <li><a href="./games.html">games</a></li>
+            <li><a href="">developers</a></li>
+            <li><a href="./shop.html">shop</a></li>
+            <li><a href="">consoles</a></li>
+        </ul>
+
+        <div class="sing-in-container">
+
+            <div class="shopping">
+                <img src="/media/shopping-cart.png" id="shopping-card" alt="">
+                <h1 class="total-items-in-cart">0</h1>
+            </div>
+
+            <div class="png-container">
+                <img src="./media/search-btn.png" id="search-button" alt="">
+                <img src="./media/sign-in.png" id="sign-button" alt="">
+            </div>
+
+        </div>
+
+        <div class="search-pannel">
+            <form id="big-nosubmit">
+                <input class="nosubmit" id="search" type="search" placeholder="Type Your Search...">
+            </form>
+        </div>
+    </div>
+
+    <!-- mobile navigation bar -->
+    <aside id="side-menu">
+        <ul class="menu-list">
+            <li><a href="./games.html">Games</a></li>
+            <li>developer CO.</li>
+            <li><a href="./shop.html">shop</a></li>
+            <li>consols</li>
+            <form class="nosubmit">
+                <input class="nosubmit" id="search" type="search" placeholder="Search...">
+            </form>
+        </ul>
+    </aside>
+
+    <!-- top main contente -->
+    <div class="main-content-container">
+
+        <div class="image-container">
+            <img src="" class="content-img" alt="">
+        </div>
+
+        <div class="content-container">
+            <h1 class="content-header"></h1>
+            <p class="content-info"></p>
+        </div>
+
+        <div class="button-container">
+            <a href="" class="btn">watch trailer</a>
+            <a href="" class="btn">pre-order</a>
+        </div>
+
+        <div class="slide-button-container">
+            <button id="previous" onclick="prevContent(); changeColor()"><i
+                    class="fa-solid fa-angles-left"></i></button>
+            <button id="next" onclick="nextContent(); changeColor()"><i class="fa-solid fa-angles-right"></i></button>
+        </div>
+
+    </div>
+
+<!-- in cart container -->
+    <div class="cart">
+    
+        <div class="cart-header">your shopping cart</div>
+    
+        <div class="cart-items"></div>
+    
+        <div class="cart-footer">
+            <div class="subtotal">Subtotal (0 items): $0</div>
+            <div class="checkout"> Proceed to checkout</div>
+        </div>
+    
+    </div>
+
+    <!-- middle main content -->
+    <div class="allheader" data-aos="zoom-in" data-aos-duration="3000">games of the year</div>
+
+    <div class="goty-container" data-aos="slide-right" data-aos-duration="1500"></div>
+
+    <div class="loadBtn-container">
+        <button class="load-more-btn">load more</button>
+    </div>
+
+    <div class="allheader" data-aos="zoom-in" data-aos-duration="3000">featured games</div>
+
+    <div class="featured-games-container" data-aos="slide-up" data-aos-duration="1500"></div>
+
+    <div class="loadBtn-container">
+        <button class="feature-more-btn">load more</button>
+    </div>
+
+    <div class="allheader" data-aos="zoom-in" data-aos-duration="3000">explore gaming platforms</div>
+
+
+    <div class="swiper-container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="allheader" data-aos="zoom-in" data-aos-duration="3000">top game developers</div>
+
+    <!-- developers and consoles section -->
+    <div class="developers-main-container">
+
+        <div class="developers-container" data-aos="slide-right" data-aos-duration="1500">
+            <div class="dev-img-cont">
+                <img src="../media/rockstar.jpg" class="dev-img" alt="">
+            </div>
+            <div class="dev-content-container">
+                <h1 class="dev-head">rockstar</h1>
+                <p class="dev-info">Rockstar Games, Inc. is an American video game publisher based in New York City.
+                    The company was established in December
+                    1998 as a subsidiary of Take-Two Interactive, using the assets Take-Two had previously acquired
+                    from BMG Interactive.</p>
+            </div>
+            <div class="dev-dots-container">
+                <div class="dev-dot"></div>
+            </div>
+        </div>
+
+        <div class="consols-container">
+            <div class="playstation-container" data-aos="slide-left" data-aos-duration="1500"></div>
+            <div class="consoles-btn-container">
+                <div class="previous"><i class="fa-solid fa-angles-left"></i></div>
+                <div class="next"><i class="fa-solid fa-angles-right"></i></div>
+            </div>
+            <div class="xbox-container" data-aos="slide-left" data-aos-duration="1500"></div>></div>
+        </div>
+    </div>
+
+
+    <footer class="socialIcons"></footer>
+    <div class="global-btn-container">
+        <button class="globe">
+            <i class="fa-solid fa-globe"></i>ENGLISH<i class="fa-sharp fa-solid fa-caret-down"></i>
+        </button>
+    </div>
+    <footer class="support"></footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./javascript/app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

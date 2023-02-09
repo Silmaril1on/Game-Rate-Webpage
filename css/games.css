@@ -1,0 +1,895 @@
+@font-face {
+  font-family: "audiowide";
+  src: url(../fonts/Audiowide.ttf);
+}
+@font-face {
+  font-family: "felix";
+  src: url(../fonts/FELIX.TTF);
+}
+@font-face {
+  font-family: "azonix";
+  src: url(../fonts/Azonix.otf);
+}
+@font-face {
+  font-family: "copperplate gothic";
+  src: url(../fonts/COPRGTL.TTF);
+}
+@font-face {
+  font-family: "palatino linotype";
+  src: url(../fonts/pala.ttf);
+}
+@font-face {
+  font-family: "sylfaen";
+  src: url(../fonts/sylfaen.ttf);
+}
+@font-face {
+  font-family: "trajan pro";
+  src: url(../fonts/Trajan\ Pro.ttf);
+}
+@font-face {
+  font-family: "lazer game zone";
+  src: url(../fonts/Lazer\ Game\ Zone.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+/* top section */
+.top-navigation-bar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.big-menu-list,
+#search-button {
+  display: none;
+}
+
+li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.toggle-button-container,
+.sing-in-container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 40px;
+  width: auto;
+}
+
+.shopping {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50px;
+}
+
+#shopping-card {
+  padding: 1px;
+  width: 33px;
+  height: 33px;
+}
+
+.shopping h1 {
+  color: white;
+  font: bold 1rem azonix;
+  margin: 13px auto;
+}
+
+.png-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1px;
+}
+
+.png-container img {
+  height: 30px;
+  padding: 3px;
+  width: 30px;
+}
+
+#logo-button {
+  height: 40px;
+  width: auto;
+}
+
+.search-pannel {
+  background-color: rgba(0, 0, 0, 0.877);
+  height: 100px;
+  position: absolute;
+  top: -110px;
+  transition: 1s ease;
+  right: 30%;
+  visibility: hidden;
+  width: 600px;
+}
+
+#big-nosubmit {
+  width: 100%;
+  padding: 15px;
+}
+
+.search-active {
+  top: 40px;
+  visibility: visible;
+}
+
+aside {
+  background-color: rgb(0, 0, 0);
+  height: auto;
+  left: -100%;
+  position: fixed;
+  transition: 0.4s linear;
+  top: 40px;
+  visibility: hidden;
+  z-index: 1;
+  width: 100%;
+}
+
+.active {
+  left: 0;
+  visibility: visible;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 15px;
+}
+
+.menu-list > li {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.445);
+  color: white;
+  cursor: pointer;
+  font: bold 1.5rem felix titling;
+  padding: 10px;
+  margin: 5px;
+}
+
+#search {
+  color: white;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(43, 41, 41, 0.993);
+  height: 30px;
+  margin: 10px;
+  width: 90%;
+}
+
+input.nosubmit {
+  width: 260px;
+  border: 1px solid #555;
+  display: block;
+  padding: 9px 4px 9px 40px;
+  background: transparent url("../media/search.png") no-repeat 10px;
+}
+
+::placeholder {
+  color: white;
+  font: bold 0.7rem felix titling;
+  padding: 10px;
+  letter-spacing: 5px;
+}
+
+/* header section */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+.slide-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.slideShow-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  width: 500%;
+}
+
+.slide-show {
+  align-items: center;
+  border-top: 3px solid white;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 40px auto;
+  position: relative;
+  width: 100%;
+}
+
+.slide-show img {
+  height: 100%;
+  width: 100%;
+}
+
+.content-container {
+  animation: load 2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+.mid-header {
+  display: none;
+}
+
+.dota-container,
+.warzone-container {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.dota-wrapper,
+.BT-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 200%;
+  height: 100%;
+}
+
+.dota-card,
+.btGames-card {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: 1s ease-in;
+  width: 100%;
+}
+
+.dota-image,
+.btGames-image {
+  height: 100%;
+  width: 100%;
+}
+
+.dota-image img,
+.btGames-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.dota-content,
+.btGames-content {
+  display: flex;
+  flex-direction: column;
+  font: bold 1rem trajan pro;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  transition: 0.3s ease-in;
+  width: 90%;
+}
+
+.dota-content:hover,
+.btGames-content:hover {
+  transform: scale(1.1);
+}
+
+.dota-info,
+.btGames-info {
+  color: rgb(201, 193, 193);
+  margin: 15px;
+  font-weight: 500;
+  transition: 1s ease-in;
+}
+
+.dota-info:hover {
+  letter-spacing: 3px;
+}
+
+.dota-info span {
+  color: white;
+  font: bolder 1.5rem;
+}
+
+.btGames-header,
+.btGames-info {
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+/* in cart rendered cards */
+.cart {
+  background-color: rgba(0, 0, 0, 0.623);
+  backdrop-filter: blur(15px);
+  color: white;
+  display: none;
+  height: 100%;
+  position: fixed;
+  padding: 5px;
+  right: 0;
+  top: 35px;
+  width: 360px;
+}
+
+.cart-header {
+  border-bottom: 3px solid white;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 5px;
+  font: bold 1rem azonix;
+}
+
+.cart-item {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: center;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.cart-image {
+  height: 100px;
+  margin: 5px;
+  width: 300px;
+}
+
+.cart-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.cart-item-content {
+  height: 100px;
+  font: bold 0.5rem azonix;
+  letter-spacing: 2px;
+  padding: 5px;
+  width: 350px;
+}
+
+.units {
+  display: flex;
+  flex-direction: row;
+  font: bold 1rem azonix;
+  height: 30px;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100px;
+}
+
+.number {
+  height: 20px;
+  padding: 3px 5px;
+  width: 20px;
+}
+
+.btn {
+  background-color: rgb(161, 120, 15);
+  border-radius: 5px;
+  cursor: pointer;
+  height: 20px;
+  padding: 3px 5px;
+  width: 20px;
+}
+
+.cart-footer {
+  align-items: center;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  font: bold 0.9rem trajan pro;
+  justify-content: center;
+}
+
+/* headline content */
+.header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  width: 90%;
+}
+
+.header h1 {
+  font: bold 2rem lazer game zone;
+  margin: 10px;
+}
+
+.header h3 {
+  font: bold 1rem azonix;
+  margin: 10px;
+}
+
+/* icons section */
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.iconBox {
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease-in;
+  width: 15%;
+}
+
+.icon-img {
+  height: 100%;
+  width: 100%;
+}
+
+.icon-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.icon-header {
+  font: bold 0.4rem azonix;
+  letter-spacing: 2px;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* filter section */
+.filter-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 10px;
+  width: 90%;
+}
+
+.filter-btn {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+  font: bold 1rem lazer game zone;
+  height: 30px;
+  letter-spacing: 2px;
+  margin: 10px;
+  outline: 3px solid goldenrod;
+  transition: 0.3s ease-in;
+  width: 40%;
+}
+
+.filter-btn:hover {
+  transform: scale(1.1);
+  letter-spacing: 5px;
+}
+
+/* search style */
+.game-search {
+  display: flex;
+  height: auto;
+  margin-bottom: 7%;
+  padding: 15px;
+  width: 90%;
+}
+
+#search-item {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+  background-color: black;
+  color: white;
+  font: bold 1.2rem azonix;
+  padding: 1px 5px;
+  margin: 10px;
+  height: 30px;
+  outline: 3px solid goldenrod;
+  transition: 0.4s ease-in;
+  width: 50%;
+}
+
+#search-item:focus {
+  width: 75%;
+}
+
+#search-item::placeholder {
+  color: white;
+  font: bold 0.6rem azonix;
+  letter-spacing: 2px;
+}
+
+/* games container styyles */
+.game-cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: auto;
+  width: 98%;
+}
+
+.game-card {
+  animation: load-card 1.5s ease;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  height: auto;
+  margin: 5px;
+  text-align: center;
+  transition: 0.5s ease-in;
+  width: 170px;
+}
+
+@keyframes load-card {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+.game-card:nth-child(1),
+.game-card:nth-child(2),
+.game-card:nth-child(3),
+.game-card:nth-child(4),
+.game-card:nth-child(5),
+.game-card:nth-child(6),
+.game-card:nth-child(7),
+.game-card:nth-child(8),
+.game-card:nth-child(9),
+.game-card:nth-child(10),
+.game-card:nth-child(11),
+.game-card:nth-child(12),
+.game-card:nth-child(13),
+.game-card:nth-child(14),
+.game-card:nth-child(15),
+.game-card:nth-child(16),
+.game-card:nth-child(17),
+.game-card:nth-child(18),
+.game-card:nth-child(19),
+.game-card:nth-child(20) {
+  display: block;
+}
+
+.game-card-image-container {
+  height: 250px;
+  width: 100%;
+}
+
+.game-card-image-container > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.game-card-content {
+  color: white;
+  font: bold 0.5rem azonix;
+  height: 70px;
+  transition: 0.3s ease-in;
+  width: 100%;
+}
+
+.game-card-content a,
+h1 {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.game-card-content:hover {
+  text-decoration: underline;
+  font-size: 0.53rem;
+}
+
+/* load button */
+.loadBtn-container {
+  padding: 10%;
+}
+
+.feature-more-btn {
+  background: black;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 4px solid goldenrod;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  font: bolder 1.5rem lazer game zone;
+  letter-spacing: 4px;
+  margin: 10px;
+  padding: 12px 30px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: 1s all ease;
+}
+
+.feature-more-btn::before {
+  background: rgba(211, 149, 14, 0.281);
+  border-radius: 7px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.feature-more-btn::before {
+  width: 100%;
+  height: 0;
+}
+
+.feature-more-btn:hover::before {
+  height: 100%;
+  z-index: 1;
+}
+
+/* footer section */
+.socialIcons {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  margin-top: 20%;
+  width: 100%;
+}
+
+.social {
+  display: inline-block;
+  list-style-type: none;
+  padding: 10px;
+}
+
+.social > li > a {
+  font-size: 2rem;
+  color: white;
+}
+
+.social > li > a:hover {
+  color: rgba(192, 137, 35, 0.808);
+  font-size: 2.3rem;
+  transition: 0.5s;
+}
+
+.global-btn-container {
+  background: rgb(29, 28, 28);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.globe {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font: bolder 2rem audiowide;
+  margin: 15px;
+  height: 90px;
+  transition: 0.6s linear;
+  width: 250px;
+}
+
+.globe:hover {
+  color: rgba(192, 137, 35, 0.808);
+}
+
+.globe > i {
+  font-size: 1.8rem;
+  margin: 10px;
+}
+
+.support {
+  align-items: center;
+  background: rgb(29, 28, 28);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+}
+
+.supportlist {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.supportlist > li {
+  color: white;
+  cursor: pointer;
+  font: bold 1.2rem copperplate gothic;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+}
+
+.supportlist > li:hover {
+  text-decoration: underline;
+}
+
+/* media queries */
+@media screen and (min-width: 550px) {
+  .content-container {
+    flex-direction: row;
+  }
+  .content-container > div {
+    margin: 3px;
+  }
+  .dota-content {
+    font-size: 0.9rem;
+  }
+  .iconBox:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .big-menu-list,
+  #search-button {
+    display: none;
+  }
+  .btn {
+    padding: 15px 40px;
+    font-size: 15px;
+  }
+  .filter-click {
+    width: 30%;
+  }
+  .filter-btn {
+    width: 30%;
+  }
+  .game-card:hover {
+    background-color: black;
+    box-shadow: 2px 2px 20px 10px black;
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dota-header {
+    font: bolder 3rem trajan pro;
+  }
+  .dota-info {
+    font-size: 1.7rem;
+  }
+  .game-card:nth-child(15),
+  .game-card:nth-child(16),
+  .game-card:nth-child(17),
+  .game-card:nth-child(18),
+  .game-card:nth-child(19),
+  .game-card:nth-child(20),
+  .game-card:nth-child(21),
+  .game-card:nth-child(22),
+  .game-card:nth-child(23),
+  .game-card:nth-child(24),
+  .game-card:nth-child(25),
+  .game-card:nth-child(26),
+  .game-card:nth-child(27),
+  .game-card:nth-child(28) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .top-navigation-bar {
+    z-index: 2;
+  }
+  .sing-in-container {
+    width: 150px;
+  }
+  .toggle-button-container {
+    display: none;
+  }
+  #search-button {
+    display: inline-block;
+  }
+  .big-menu-list {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    width: 900px;
+  }
+  .big-menu-list > li {
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font: bolder 1.3rem felix titling;
+    padding: 8px;
+    transition: 0.3s ease-in;
+  }
+  .big-menu-list > li > a:hover {
+    color: rgba(192, 137, 35, 0.808);
+  }
+  .main-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .slide-wrapper {
+    height: 100%;
+    width: 70%;
+  }
+  .content-container {
+    border-top: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    margin: 40px auto;
+    height: auto;
+    width: 30%;
+  }
+  .dota-container {
+    height: auto;
+    width: 100%;
+  }
+  .mid-header {
+    display: flex;
+    justify-content: center;
+  }
+  .mid-header h1 {
+    text-align: center;
+    font: bold 2rem lazer game zone;
+    border-right: 5px solid goldenrod;
+    border-left: 5px solid goldenrod;
+    width: 60%;
+  }
+  .warzone-container {
+    height: auto;
+    width: 100%;
+  }
+  .dota-header {
+    font-size: 1.5rem;
+  }
+}
