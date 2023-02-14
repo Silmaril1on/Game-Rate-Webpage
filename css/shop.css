@@ -203,7 +203,6 @@ header {
   display: inline-block;
   color: transparent;
   margin: 5px;
-  /* -webkit-text-stroke: 0.1px white; */
   -webkit-background-clip: text;
 }
 
@@ -309,6 +308,7 @@ header {
 
 .filter-btn {
   background-color: rgb(18, 18, 19);
+  border: none;
   display: inline-block;
   color: rgba(255, 255, 255, 0.747);
   cursor: pointer;
