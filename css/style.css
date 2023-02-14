@@ -15,7 +15,7 @@
   src: url(../fonts/COPRGTL.TTF);
 }
 @font-face {
-  font-family: "palatino linotype";
+  font-family: "palatino linotype"; 
   src: url(../fonts/pala.ttf);
 }
 @font-face {
@@ -69,8 +69,14 @@ li > a {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 40px;
+  height: auto;
   width: auto;
+}
+
+.toggle-button-container > img {
+  padding: 5px;
+  height: 45px;
+  width: 45px;
 }
 
 .shopping {
@@ -159,6 +165,7 @@ aside {
   cursor: pointer;
   font: bold 1.5rem felix titling;
   padding: 10px;
+  text-transform: capitalize;
   margin: 5px;
 }
 
@@ -418,7 +425,6 @@ input.nosubmit {
   border-bottom: 5px solid goldenrod;
   font: bold 2.3rem copperplate gothic;
   text-align: center;
-  text-shadow: 2px 1px 10px whitesmoke;
   margin: 5%;
 }
 

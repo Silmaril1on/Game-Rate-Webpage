@@ -10,6 +10,14 @@
   font-family: "felix titling";
   src: url(/fonts/FELIX.TTF);
 }
+@font-face {
+  font-family: copperplate gothic;
+  src: url(../fonts/COPRGTL.TTF);
+}
+@font-face {
+  font-family: audiowide;
+  src: url(../fonts/Audiowide.ttf);
+}
 
 * {
   margin: 0;
